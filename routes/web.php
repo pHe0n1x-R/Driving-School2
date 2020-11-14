@@ -24,5 +24,10 @@ Route::get('/', function () {
 
 Route::resource('student','StudentController');
 
-Route::get('/getindexpagetable/','StudentController@indexpagetable')->name('ajax.indexpagetable');
-Route::resource('ajax','StudentController');
+Route::get('/datat/','StudentController@indexpagetable')->name('datatable.indexpagetable');
+Route::resource('datatable','StudentController');
+
+Route::resource('datatable','DatatableController');
+Route::get('/datat1/', 'DatatableController@showdata')->name('datatable.showdata');
+Route::resource('aaa','TestTBController');
+Route::get('/testtb/', 'TestTBController@testtb')->name('testtb.table');

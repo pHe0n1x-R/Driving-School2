@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeStudentTable extends Migration
+class CreateDatatablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class ChangeStudentTable extends Migration
      */
     public function up()
     {
-        Schema::table('students',function (Blueprint $table){
-            $table->string('email')->nullable()->after('age');
+        Schema::create('datatables', function (Blueprint $table) {
+            $table->id();
+            $table->string('fname');
+            $table->string('lname');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class ChangeStudentTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('datatables');
     }
 }

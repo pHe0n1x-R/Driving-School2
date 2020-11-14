@@ -45,9 +45,7 @@
             </p>
           </li>
           <li>
-            <p>
               <a href="#!">Certificates</a>
-            </p>
           </li>
         </ul>
 
@@ -75,10 +73,10 @@
             <p>
               <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
           </li>
-          <li>
+          <!-- <li>
             <p>
               <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
-          </li>
+          </li> -->
         </ul>
 
       </div>

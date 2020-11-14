@@ -128,9 +128,7 @@ class StudentController extends Controller
 public function indexpagetable(){
 
     $ajaxdata = Student::all();
-    return Datatables::of($ajaxdata)
-
-     ->make(true);
+    return Datatables::of($ajaxdata)->make(true);
 
 }
 }

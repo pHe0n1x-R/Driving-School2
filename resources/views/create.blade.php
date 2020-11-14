@@ -24,14 +24,14 @@
     </div>
 @endif
 
-    <form  action="{{ route('student.store') }}" method="POST">
+    <form  action="{{ route('student.store') }}" method="POST" autocomplete="on">
         @csrf
         <div class="container">
             <div class="row">
                 <div class="col-6 m-auto bg-light text-dark">
                     <h2 align="center">Application Form</h2>
                         
-        <div class="form-group">
+        <div class="form-group" >
             <lable>First Name:</lable>
             <input type="text" class="form-control" id="fname" name="firstName" value="{{old('firstName')}}" placeholder="Enter your first name" > 
         </div>
@@ -66,16 +66,28 @@
                 <input type="radio" id="female" name="gender" value="female">
              <label for="female">Female</label>
         </div>
-        <div class="form-group">
+
+        <form>
+        <div class="row">
+            <div class="col">
             <input type="submit" class="form-control btn btn-primary" value="Submit">
         </div>  
-        <div class="form-group">
+
+        <div class="col">
             <input type="reset" class="form-control btn btn-warning" name="clear" id="clear" value="Clear">
         </div> 
+        </div>
+        </form>
+        
                 </div>
             </div></div>
     
     </form>
+
+
+
+
+
 
      {{-- <script>
         $(document).ready(function(){
@@ -94,10 +106,21 @@
 <button id="hide">Hide</button>
 <button id="show">Show</button> --}}
 
+{{-- <form>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name">
+      </div>
+    </div>
+  </form> --}}
 
 </body>
 
 </html>
+
 
 @include('includes.footer')
 

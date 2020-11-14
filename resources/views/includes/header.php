@@ -23,10 +23,10 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="http://127.0.0.1:8000/">
       <span class="navbar-brand mb-0 h1">
     
-      <img src="{{ URL::to('/asset/img/a.png') }}">
+      <img src="../asset/img/a.png" width="40" height="40">
   ORCHID Driving School
     </span>
 </a>
