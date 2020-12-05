@@ -31,3 +31,10 @@ Route::resource('datatable','DatatableController');
 Route::get('/datat1/', 'DatatableController@showdata')->name('datatable.showdata');
 Route::resource('aaa','TestTBController');
 Route::get('/testtb/', 'TestTBController@testtb')->name('testtb.table');
+
+Route::resource('picturestore','PictureStoreController');
+
+Route::resource('theme','themeController');
+
+Route::resource('ajax','AjaxController');
+

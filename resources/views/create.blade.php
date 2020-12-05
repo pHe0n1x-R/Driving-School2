@@ -67,7 +67,6 @@
              <label for="female">Female</label>
         </div>
 
-        <form>
         <div class="row">
             <div class="col">
             <input type="submit" class="form-control btn btn-primary" value="Submit">

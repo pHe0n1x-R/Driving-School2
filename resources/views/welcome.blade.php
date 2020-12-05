@@ -89,6 +89,7 @@
                     <a href="http://127.0.0.1:8000/student">Student List</a>
                     <a href="http://127.0.0.1:8000/student/create">Registration Form</a>
                     <a href="http://127.0.0.1:8000/student/show">Course Details</a>
+                    <a href="http://127.0.0.1:8000/picturestore/create">Picture Store</a>
                     {{-- <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
