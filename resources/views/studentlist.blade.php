@@ -1,30 +1,11 @@
 @include('includes.header')
 @extends('student')
 
-
- {{-- <script
-        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-        crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
- 
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script> --}}
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 {{-- DataTables --}}
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.22/b-1.6.4/datatables.min.css"/>
  
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.22/b-1.6.4/datatables.min.js"></script>
-
-
-     
-
-       
 
 @section('content')
 @section('title','|student')
@@ -89,6 +70,7 @@
 
   </tbody>
 </table> --}}
+
 </head>
 <body>
 <table class="table table-bordered table-hover datatable" id="table1" role="grid">
@@ -97,12 +79,13 @@
       <th> ID </th>
       <th> First Name </th>
       <th> Last Name </th>
-      <th> Address </th>
+      {{-- <th> Address </th> --}}
       <th> NIC </th>
-      <th style="width:70px;"> DOB </th>
-      <th style="width:80px"> Contact </th>
+      {{-- <th style="width:70px;"> DOB </th> --}}
+      {{-- <th style="width:80px"> Contact </th> --}}
       <th> Email </th>
-      <th> Gender </th>
+      {{-- <th> Gender </th> --}}
+      <th> Actions </th>
       
       
     </tr>
@@ -121,16 +104,16 @@
                     {data: 'id', name: 'id'},
                     {data: 'firstName', name: 'firstName'},
                     {data: 'lastName', name: 'lastName'},
-                    {data: 'address', name: 'address'},
+                    // {data: 'address', name: 'address'},
                     {data: 'nic', name: 'nic'},
-                    {data: 'date', name: 'date'},
-                    {data: 'contact', name: 'contact'},
+                    // {data: 'date', name: 'date'},
+                    // {data: 'contact', name: 'contact'},
                     {data: 'email', name: 'email'},
-                    {data: 'gender', name: 'gender'},
-
+                    // {data: 'gender', name: 'gender'},
+                    {data: 'action', name: 'action'},
                     
     
-                    
+    
                 ]
         
     

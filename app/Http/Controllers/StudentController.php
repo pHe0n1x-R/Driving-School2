@@ -76,7 +76,9 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-     return view('course');
+        $student = Student::find($id);
+        return view ('show',compact('student'));
+
     }
 
     /**
@@ -125,10 +127,22 @@ class StudentController extends Controller
     }
 
 
-public function indexpagetable(){
+    public function indexpagetable(){
+       
+        $ajaxdata = Student::all();
+       
+        return Datatables::of($ajaxdata)
+        ->addColumn('action', function ($ajaxdata) {
+            $buttons ='<a class="fa fa-view btn btn-sm btn-primary btn-rounded m-b-1 m-l-5"   href="'.url('/student/'.$ajaxdata->id.'/').'">More</a> 
+            <a class="fa fa-edit btn btn-sm btn-success btn-rounded m-b-1 m-l-5" href="'.url('/student/'.$ajaxdata->id.'/edit').'">Edit</a>
+            <input type="hidden" id="hiddenID" value="'.$ajaxdata->id.'">
+            <button class="fa fa-trash-alt btn btn-sm btn-danger btn-rounded m-b-1 m-l-5" id="delete">Delete</button>';
 
-    $ajaxdata = Student::all();
-    return Datatables::of($ajaxdata)->make(true);
+           
+            return $buttons;
+        })
 
-}
+        ->make(true);
+
+    }
 }
