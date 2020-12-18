@@ -87,28 +87,26 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $students)
+    public function edit($id)
     {
-      return view ('edit',compact ('students'));
+        $student = student::find($id);
+        return view('edit',compact('student'));
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+ 
+    public function update(Request $request, Student $student)
     {
-        $student = Student::find($id);
-        $student->firstName = $request->input('firstName');
-        $student->lastName = $request->input('lastName');
-        $student->age = $request->input('age');
-        $student->status = $request->input('status');
-        $student->save();
-        return redirect('/');
-
+        $request->validate([
+            'firstname' => 'required',
+            'lastname'  => 'required',
+            'nic'       => 'required',
+            'address'   => 'required',
+            
+        ]);
+  
+        $student->update($request->all());
+  
+        return redirect()->route('student.index')
+                        ->with('success','updated successfully');
     }
 
     /**
@@ -136,7 +134,7 @@ class StudentController extends Controller
             $buttons ='<a class="fa fa-view btn btn-sm btn-primary btn-rounded m-b-1 m-l-5"   href="'.url('/student/'.$ajaxdata->id.'/').'">More</a> 
             <a class="fa fa-edit btn btn-sm btn-success btn-rounded m-b-1 m-l-5" href="'.url('/student/'.$ajaxdata->id.'/edit').'">Edit</a>
             <input type="hidden" id="hiddenID" value="'.$ajaxdata->id.'">
-            <button class="fa fa-trash-alt btn btn-sm btn-danger btn-rounded m-b-1 m-l-5" id="delete">Delete</button>';
+            <button id="remove" class="fa fa-trash-alt btn btn-sm btn-danger btn-rounded m-b-1 m-l-5" id="delete">Delete</button>';
 
            
             return $buttons;

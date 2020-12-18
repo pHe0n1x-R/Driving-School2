@@ -120,10 +120,17 @@
     
     
         } );
+      
     } );
-    
-  
+    $('#table1 tbody').on( 'click', '#remove', function () {
+            table
+            .row( $(this).parents('tr') )
+            .remove()
+            .draw();
+     });
+
 </script>
+
 </body>
 </table>
 
