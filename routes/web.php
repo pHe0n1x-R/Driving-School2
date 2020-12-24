@@ -18,8 +18,9 @@ Route::get('/', function () {
 
 Route::resource('student','StudentController');
 Route::get('/datat/','StudentController@indexpagetable')->name('datatable.indexpagetable');
-Route::resource('datatable','StudentController');
+// Route::resource('datatable','StudentController');
 Route::resource('picturestore','PictureStoreController');
 Route::resource('theme','themeController');
-Route::resource('ajax','AjaxController');
+// Route::resource('ajax','AjaxController');
+Route::any('/remove/{id}', 'StudentController@remove')->name('ajax.remove');
 
