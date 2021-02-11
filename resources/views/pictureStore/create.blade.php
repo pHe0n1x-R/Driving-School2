@@ -1,7 +1,7 @@
 
 @include('includes.header')
 
- @extends('student')
+@extends('partials.layout')
 
  @section('content')
      

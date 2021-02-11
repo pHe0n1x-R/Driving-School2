@@ -40,8 +40,8 @@
     var BASE = "{{url('/')}}/";
     $('form').on('submit', function(e){
     e.preventDefault();
-    //alert('default prevented');
-    //alert(BASE);
+    alert('default prevented');
+    alert(BASE);
  
     var params ={
         fname:$('#fname').val(),
@@ -54,12 +54,12 @@
         dataType: 'JSON',
         data: $.param(params),
         success: function (response) {
-            // Swal.fire({
-            //     title: 'Store function activated',
-            //     text: response.success,
-            //     icon: 'info',
-            //     confirmButtonText: 'Jaya'
-            // });
+            Swal.fire({
+                title: 'Store function activated',
+                text: response.success,
+                icon: 'info',
+                confirmButtonText: 'Jaya'
+            });
 
 toastr.options.closeButton = true;
 toastr.success(response.success)

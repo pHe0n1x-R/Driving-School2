@@ -1,5 +1,5 @@
 <!-- jQuery -->
-<script src="{{'asset/js/plugins/jquery/jquery.min.js'}}"></script>
+{{-- <script src="{{'asset/js/plugins/jquery/jquery.min.js'}}"></script> --}}
 <!-- jQuery UI 1.11.4 -->
 <script src="{{'/asset/js/plugins/jquery-ui/jquery-ui.min.js'}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -7,6 +7,8 @@
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="{{'asset/js/plugins/bootstrap/js/bootstrap.bundle.min.js'}}"></script>
 <!-- ChartJS -->
 <script src="asset/js/plugins/chart.js/Chart.min.js"></script>

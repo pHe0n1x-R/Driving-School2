@@ -1,11 +1,11 @@
-@include('includes.header')
-@extends('student')
-   
+
+@extends('partials.layout')
+  
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Blog</h2>
+                <h2>Edit Student</h2>
             </div>
         </div>    
     </div>
@@ -46,6 +46,18 @@
                     <input type="text" name="date" value="{{ $student->date }}" class="form-control" placeholder="Title">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Gender :</strong> <br>
+                    <label for="gender">Male : </label> 
+                    <input type="radio" name="gender" id="" value="male" {{($student->gender=="male")?"checked":""}}><br>
+                    <label for="gender">Female : </label>
+                    <input type="radio" name="gender" id="" value="female" {{($student->gender=="female")?"checked":""}}><br>
+                    <label for="gender">Other : </label>
+                    <input type="radio" name="gender" id="" value="other" {{($student->gender=="other")?"checked":""}}><br>
+                </div>
+            </div>
+
             
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
